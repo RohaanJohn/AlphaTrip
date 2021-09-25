@@ -5,5 +5,5 @@ def index(request):
 
     dests = Destination.objects.all()
 
-    return render(request, 'index.html', {'dests': dests})
+    return render(request, 'index.html', {'dest': dests})
 
