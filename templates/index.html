@@ -87,11 +87,17 @@
 			</div>
 			<div class="menu_content">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					                                       <li class="active"><a href="">Home</a></li>
+									        <li><a href="accounts/contact">Contact</a></li>
+                                                                                {% if user.is_authenticated %} 
+                                                                                <li>Hello, {{user.first_name}}</li>
+                                                                                <li><a href="accounts/logout">Logout</a></li>
+                                                                                {% else %}
+
+
+                                                                                <li><a href="accounts/register">Register</a></li>  
+                                                                                <li><a href="accounts/login">Login</a></li>
+                                                                                {% endif %}
 				</ul>
 			</div>
 			<div class="menu_social">
