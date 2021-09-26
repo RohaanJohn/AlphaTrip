@@ -303,7 +303,7 @@ section
 
 .header
 {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -466,7 +466,7 @@ section
 
 .menu
 {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: -100vw;
 	width: 100vw;
