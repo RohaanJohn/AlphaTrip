@@ -63,7 +63,7 @@ def contact(request):
         username = request.POST['username']
         msg = request.POST['message']
         
-        EmailL_Password = os.environ.get('Email_Password')
+        Email_Password = os.environ.get('Email_Password')
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
