@@ -62,7 +62,7 @@ def contact(request):
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
-        s.login("thealphadebuggers@gmail.com", Email_Password)
+        s.login("thealphadebuggers@gmail.com", ${{secrets.Email_Password}})
         SUBJECT = "Alpha Trip"
         TEXT = f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip!"
         message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
@@ -70,7 +70,7 @@ def contact(request):
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
-        s.login("thealphadebuggers@gmail.com", Email_Password)
+        s.login("thealphadebuggers@gmail.com", ${{secrets.Email_Password}})
         SUBJECT = "Contact"
         TEXT = f"Using the email address {email}, here is a message from {username}: {msg}"
         message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
