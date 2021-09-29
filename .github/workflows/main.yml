@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Step 1
+      env: 
+        
+         Email_Password: ${{ secrets.Email_Password }}
       run: |
         echo "The GitHub Action Secret will be masked: "
         echo ${{ secrets.Email_Password}} 
