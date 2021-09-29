@@ -4,7 +4,7 @@ from django.contrib import messages
 import smtplib
 import os
 # Create your views here.
-Email_Password = os.environ.get('Email_Password')
+
 
 def login(request):
     if request.method== 'POST':
@@ -64,6 +64,7 @@ def contact(request):
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
+        Email_Password = os.environ.get('Email_Password')
         s.login("thealphadebuggers@gmail.com", Email_Password)
         SUBJECT = "Alpha Trip"
         TEXT = f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip!"
@@ -71,7 +72,8 @@ def contact(request):
         s.sendmail("thealphadebuggers@gmail.com", f"{email}", message)
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
-        s.starttls() 
+        s.starttls()
+        Email_Password = os.environ.get('Email_Password')
         s.login("thealphadebuggers@gmail.com", Email_Password)
         SUBJECT = "Contact"
         TEXT = f"Using the email address {email}, here is a message from {username}: {msg}"
