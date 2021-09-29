@@ -11,6 +11,6 @@ jobs:
     - name: Step 1
       run: |
         echo "The GitHub Action Secret will be masked: "
-        echo ${{ secrets.Email_Password}} |
+        echo ${{ secrets.Email_Password}} 
  
         
