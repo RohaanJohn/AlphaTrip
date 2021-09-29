@@ -63,22 +63,21 @@ def contact(request):
         msg = request.POST['message']
         Email_Password = os.environ.get('Email_Password')
 
-        s = smtplib.SMTP('smtp.gmail.com', 587) 
-        s.starttls() 
-        s.login("thealphadebuggers@gmail.com", Email_Password)
-        SUBJECT = "Alpha Trip"
-        TEXT = f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip!"
-        message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-        s.sendmail("thealphadebuggers@gmail.com", f"{email}", message)
-
-        s = smtplib.SMTP('smtp.gmail.com', 587) 
-        s.starttls()
-        s.login("thealphadebuggers@gmail.com", Email_Password)
-        SUBJECT = "Contact"
-        TEXT = f"Using the email address {email}, here is a message from {username}: {msg}"
-        message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-        s.sendmail("thealphadebuggers@gmail.com", "thealphadebuggers@gmail.com", message)
-
+         # get email and password from environment variables
+    
+    EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+    
+    # set up email content
+    msg = EmailMessage()
+    msg['Subject'] = 'Alpha Trip'
+    msg['From'] = thealphadebuggers@gmail.com
+    msg['To'] = email
+    msg.set_content(f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip!")
+    
+    # send email
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        s.login(thealphadebuggers@gmail.com, EMAIL_PASSWORD)
+        s.send_message(msg)
         s.quit()
         
 
