@@ -61,10 +61,10 @@ def contact(request):
         email = request.POST['email']
         username = request.POST['username']
         msg = request.POST['message']
+        Email_Password = os.environ.get('Email_Password')
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
-        Email_Password = os.environ.get('Email_Password')
         s.login("thealphadebuggers@gmail.com", Email_Password)
         SUBJECT = "Alpha Trip"
         TEXT = f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip!"
@@ -73,7 +73,6 @@ def contact(request):
 
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls()
-        Email_Password = os.environ.get('Email_Password')
         s.login("thealphadebuggers@gmail.com", Email_Password)
         SUBJECT = "Contact"
         TEXT = f"Using the email address {email}, here is a message from {username}: {msg}"
