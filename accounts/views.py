@@ -75,9 +75,10 @@ def contact(request):
         msg.set_content(f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip! Your message: {msg}")
     
     # send email
-         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            s.login(thealphadebuggers@gmail.com, EMAIL_PASSWORD)
-            s.send_message(msg)
+         with s.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(thealphadebuggers@gmail.com, EMAIL_PASSWORD)
+            smtp.send_message(msg)
+            
             s.quit()
         
 
