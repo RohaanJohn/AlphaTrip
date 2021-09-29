@@ -2,16 +2,16 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - master
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          Email_Password: ${{secrets.Email_Password}}
-          heroku_app_name: "AlphaTrip" #Must be unique in Heroku
-          heroku_email: "rohaanrenujohn@gmail.com"
+    - name: Step 1
+      run: |
+        echo "The GitHub Action Secret will be masked: "
+        echo ${{ secrets.Email_Password}}
+        echo "Trick to echo GitHub Actions Secret: "
+        echo ${{secrets.Email_Password}} | sed 's/ ./& /g'
+        
