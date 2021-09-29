@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 import smtplib
+import os
 # Create your views here.
 Email_Password = os.environ.get('Email_Password')
 
