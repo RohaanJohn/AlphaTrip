@@ -60,7 +60,7 @@ def contact(request):
   if request.method== 'POST':
         email = request.POST['email']
         username = request.POST['username']
-        msg = request.POST['message']
+        mg = request.POST['message']
         
 
          # get email and password from environment variables
@@ -72,7 +72,7 @@ def contact(request):
         msg['Subject'] = 'Alpha Trip'
         msg['From'] = thealphadebuggers@gmail.com
         msg['To'] = email
-        msg.set_content(f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip! Your message: {msg}")
+        msg.set_content(f"Hi {username}! We will look into your message and send you a reply as soon as possible if needed. Thank you for using Alpha Trip! Your message: {mg}")
     
     # send email
          with s.SMTP_SSL('smtp.gmail.com', 465) as smtp:
