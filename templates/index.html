@@ -664,9 +664,6 @@ html {
 }
 </style>
 </head>	
-	
-	
-
 <button onclick="topFunction()" id="myBtn" title="Go to top">👆</button>
 <script>
 //Get the button
@@ -690,6 +687,50 @@ function topFunction() {
 }
 </script>
 
-</body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 
+#myBttn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0A7029;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBttn:hover {
+  background-color: #FFFF00;
+}
+</style>
+</head>
+<button onClick="window.location.href='https://rohaanjohn.herokuapp.com';" id="myBttn" title="About">👋</button>
+<script>
+//Get the button
+var myaboutbutton = document.getElementById("myBttn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  
+    myaboutbutton.style.display = "block";
+  } 
+
+
+</script>
+
+</body>
 </html>
