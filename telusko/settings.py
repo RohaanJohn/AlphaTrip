@@ -76,10 +76,18 @@ WSGI_APPLICATION = 'telusko.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-Database_Credentials = os.environ.get('Database_Credentials')
-
+Database_Password = os.environ.get('Database_Password')
+Database_Port = os.environ.get('Database_Port')
+Database_Name= os.environ.get('Database_Name')
+Database_User = os.environ.get('Database_User')
 DATABASES = {
-    Database_Credentials
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': Database_Name,
+        'USER': Database_User,
+        'PASSWORD': Database_Password,
+        'HOST': Database_Port
+         }
     }
 
 
