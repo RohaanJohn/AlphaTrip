@@ -81,7 +81,7 @@ Database_Credentials = os.environ.get('Database_Credentials')
 DATABASES = {
     Database_Credentials
     }
-}
+
 
 
 # Password validation
