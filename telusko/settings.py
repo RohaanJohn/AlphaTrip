@@ -75,6 +75,7 @@ WSGI_APPLICATION = 'telusko.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+Database_Password = os.environ.get('Database_Password')
 
 DATABASES = {
     'default': {
