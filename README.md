@@ -1,5 +1,5 @@
 # AlphaTrip
-A Django project to showcase various places.
+A website to showcase various places.
 Contact page, registration page, login page and logout page is also available in this dynamic website. 
 The user generated data is stored in the postgreSQL integrated with Heroku. 
 This website is deployed in Heroku.
