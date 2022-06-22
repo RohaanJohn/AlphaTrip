@@ -37,13 +37,13 @@
 										<li class="active"><a href="" style="margin-top:40px;">Home</a></li>
 									        <li><a href="accounts/contact" style="margin-top:40px;" >Contact</a></li>
                                                                                 {% if user.is_authenticated %} 
-                                                                                <li><a style="margin-top:40px;" >Hello, {{user.first_name}}</a></li>
-                                                                                <li><a style="margin-top:40px;" href="accounts/logout">Logout</a></li>
+                                                                                <li><a style="margin-top:30px;" >Hello, {{user.first_name}}</a></li>
+                                                                                <li><a style="margin-top:30px;" href="accounts/logout">Logout</a></li>
                                                                                 {% else %}
 
 
-                                                                                <li><a style="margin-top:40px;" href="accounts/register">Register</a></li>  
-                                                                                <li><a style="margin-top:40px;" href="accounts/login">Login</a></li>
+                                                                                <li><a style="margin-top:30px;" href="accounts/register">Register</a></li>  
+                                                                                <li><a style="margin-top:30px;" href="accounts/login">Login</a></li>
                                                                                 {% endif %}
                                                                                  
 
