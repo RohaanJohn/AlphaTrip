@@ -5,7 +5,7 @@
 
 <head>
 	<link rel="icon" href="https://cdn.glitch.me/12c95ed7-1d16-472b-bc84-306aba12e8f3%2Fgiphy.gif?v=1635701621849">
-	<title>Alpha Trip</title>
+	<title>AlphaTrip</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Alpha Trip template project">
@@ -31,19 +31,19 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo"><a href="index.html"><img width="60" height="60" src="https://cdn.glitch.me/12c95ed7-1d16-472b-bc84-306aba12e8f3%2Fgiphy.gif?v=1635701621849">AlphaTrip</a></div>
+								<div class="logo"><a href="/"><img width="60" height="60" src="https://cdn.glitch.me/12c95ed7-1d16-472b-bc84-306aba12e8f3%2Fgiphy.gif?v=1635701621849">AlphaTrip</a></div>
 								<nav class="main_nav">
 									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li class="active"><a href="">Home</a></li>
-									        <li><a href="accounts/contact">Contact</a></li>
+										<li class="active"><a href="" style="margin-top:40px;">Home</a></li>
+									        <li><a href="accounts/contact" style="margin-top:40px;" >Contact</a></li>
                                                                                 {% if user.is_authenticated %} 
-                                                                                <li>Hello, {{user.first_name}}</li>
-                                                                                <li><a href="accounts/logout">Logout</a></li>
+                                                                                <li><a style="margin-top:40px;" >Hello, {{user.first_name}}</a></li>
+                                                                                <li><a style="margin-top:40px;" href="accounts/logout">Logout</a></li>
                                                                                 {% else %}
 
 
-                                                                                <li><a href="accounts/register">Register</a></li>  
-                                                                                <li><a href="accounts/login">Login</a></li>
+                                                                                <li><a style="margin-top:40px;" href="accounts/register">Register</a></li>  
+                                                                                <li><a style="margin-top:40px;" href="accounts/login">Login</a></li>
                                                                                 {% endif %}
                                                                                  
 
