@@ -77,7 +77,7 @@ def contact(request):
         s.starttls() 
         s.login("thealphadebuggers@gmail.com", "olxewnhbbvmyzywd")
         SUBJECT = "Contact"
-        TEXT = f"Using the email address {email}, here is a message from {username}: {msg}"
+        TEXT = f"Using the email address {email}, here is a message from {username}: {msg}. From AlphaTrip Website."
         message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
         s.sendmail("thealphadebuggers@gmail.com", "thealphadebuggers@gmail.com", message)
 
