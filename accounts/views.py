@@ -69,7 +69,7 @@ def contact(request):
         s.starttls() 
         s.login("thealphadebuggers@gmail.com", "olxewnhbbvmyzywd")
         SUBJECT = "Thank you!"
-        TEXT = f"Hi {username}! Thank you for visiting AlphaTrip! Keep Exploring!🧳"
+        TEXT = f"Hi {username}! Thank you for visiting AlphaTrip! Keep Exploring!"
         message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
         s.sendmail("thealphadebuggers@gmail.com", f"{email}", message)
 
