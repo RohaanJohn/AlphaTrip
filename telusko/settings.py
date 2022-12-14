@@ -23,8 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-The_Secret_Key = os.environ.get('The_Secret_Key')
-SECRET_KEY = The_Secret_Key
+SECRET_KEY = 'django-insecure-*joz_2y(hcz0q9f4@2miit43c_n9c+7353ij^=gb2yhidar0na'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -76,20 +75,15 @@ WSGI_APPLICATION = 'telusko.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-Database_Password = os.environ.get('Database_Password')
-Database_Port = os.environ.get('Database_Port')
-Database_Name= os.environ.get('Database_Name')
-Database_User = os.environ.get('Database_User')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': Database_Name,
-        'USER': Database_User,
-        'PASSWORD': Database_Password,
-        'HOST': Database_Port
-         }
+        'NAME': 'd1hoa9q3jneel2',
+        'USER': 'bcslkqpmqnwrsu',
+        'PASSWORD': 'f0f7878d23674f8872e71546b762cd5f03959f89ef6b5a5baed37420b1972f0e',
+        'HOST': 'ec2-54-89-105-122.compute-1.amazonaws.com'
     }
-
+}
 
 
 # Password validation
