@@ -28,7 +28,7 @@ SECRET_KEY = The_Secret_Key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['alphatrip.herokuapp.com']
+ALLOWED_HOSTS = ['alphatrip.up.railway.app']
 
 
 # Application definition
