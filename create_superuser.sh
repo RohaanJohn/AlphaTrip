@@ -1,2 +1,2 @@
 #!/bin/bash
-python manage.py createsuperuser --username 'Rohaan' --email 'rohaanjohn0@gmail.com' 
+python manage.py createsuperuser 'Rohaan' superuser '1234' password --noinput
