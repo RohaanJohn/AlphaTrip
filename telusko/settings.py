@@ -73,6 +73,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'telusko.wsgi.application'
 
+settings.configure(
+    DEBUG=True,
+    DATABASES={
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'railway',
+            'USER': 'postgres',
+            'PASSWORD': 'qLEf3YO90eRupxIHliqZ',
+            'HOST': 'containers-us-west-158.railway.app'
+        }
+    }
+)
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -86,18 +99,6 @@ DATABASES = {
     }
 }
 
-settings.configure(
-    DEBUG=True,
-    DATABASES={
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'railway',
-            'USER': 'postgres',
-            'PASSWORD': 'qLEf3YO90eRupxIHliqZ',
-            'HOST': 'containers-us-west-158.railway.app'
-        }
-    }
-)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
