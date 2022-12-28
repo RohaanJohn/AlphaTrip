@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
-        parser.add_argument('username', type=str)
-        parser.add_argument('email', type=str)
-        parser.add_argument('password', type=str)
+        parser.add_argument('Rohaan', type=str)
+        parser.add_argument('rohaanjohn0@gmai.com', type=str)
+        parser.add_argument('1234', type=str)
 
     def handle(self, *args, **kwargs):
         username = kwargs['username']
