@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn telusko.wsgi --log-file=-
+web: python manage.py migrate && gunicorn telusko.wsgi
