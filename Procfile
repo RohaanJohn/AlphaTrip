@@ -1,2 +1,2 @@
-release: python manage.py migrate && chmod +x __init__.py && ./management/__init__.py
+release: python manage.py migrate && chmod u+x create_superuser.sh && ./create_superuser.sh
 web: python manage.py migrate && gunicorn telusko.wsgi
