@@ -18,3 +18,4 @@ Pillow==8.0.0
 tensorflow==2.5.0
 numpy==1.19.3
 django-cors-headers==3.10.1
+django-createsuperuser==2020.12.3
