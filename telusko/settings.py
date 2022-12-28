@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'telusko.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1hoa9q3jneel2',
-        'USER': 'bcslkqpmqnwrsu',
-        'PASSWORD': 'f0f7878d23674f8872e71546b762cd5f03959f89ef6b5a5baed37420b1972f0e',
-        'HOST': 'ec2-54-89-105-122.compute-1.amazonaws.com'
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'qLEf3YO90eRupxIHliqZ',
+        'HOST': 'containers-us-west-158.railway.app'
     }
 }
 
