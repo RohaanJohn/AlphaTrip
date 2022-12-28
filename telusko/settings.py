@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 import django_heroku
 from os import environ
-
+from django.conf import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,6 +86,18 @@ DATABASES = {
     }
 }
 
+settings.configure(
+    DEBUG=True,
+    DATABASES={
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'railway',
+            'USER': 'postgres',
+            'PASSWORD': 'qLEf3YO90eRupxIHliqZ',
+            'HOST': 'containers-us-west-158.railway.app'
+        }
+    }
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
