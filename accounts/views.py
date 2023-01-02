@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.core.mail import send_mail
 import smtplib
 import os
 from os import environ
@@ -65,21 +66,21 @@ def contact(request):
         
         #Email_Password = os.environ.get('Email_Password')
 
-        s = smtplib.SMTP('smtp.gmail.com', 587) 
-        s.starttls() 
-        s.login("thealphadebuggers@gmail.com", "olxewnhbbvmyzywd")
-        SUBJECT = "Thank you!"
-        TEXT = f"Hi {username}! Thank you for visiting AlphaTrip. Keep Exploring!"
-        message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-        s.sendmail("thealphadebuggers@gmail.com", f"{email}", message)
+        send_mail(
+       'AlphaTrip',  # Subject
+       f"Hi {username}! Thank you for visiting AlphaTrip. Keep Exploring!",  # Message
+       'thealphadebuggers@gmail.com',  # From email
+       [f"{email}"],  # List of recipient email addresses
+       fail_silently=False,  # Optional argument to suppress errors
+       )
 
-        s = smtplib.SMTP('smtp.gmail.com', 587) 
-        s.starttls() 
-        s.login("thealphadebuggers@gmail.com", "olxewnhbbvmyzywd")
-        SUBJECT = "Contact"
-        TEXT = f"Using the email address {email}, here is a message from {username}: {msg}. From AlphaTrip Website."
-        message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-        s.sendmail("thealphadebuggers@gmail.com", "thealphadebuggers@gmail.com", message)
+        send_mail(
+       'AlphaTrip',  # Subject
+       f"Using the email address {email}, here is a message from {username}: {msg}. From AlphaTrip Website.",  # Message
+       'thealphadebuggers@gmail.com',  # From email
+       ['thealphadebuggers@gmail.com'],  # List of recipient email addresses
+       fail_silently=False,  # Optional argument to suppress errors
+       )
 
         s.quit()
         
