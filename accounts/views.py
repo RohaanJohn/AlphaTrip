@@ -69,7 +69,7 @@ def contact(request):
         send_mail(
        'AlphaTrip',  # Subject
        f"Hi {username}! Thank you for visiting AlphaTrip. Keep Exploring!",  # Message
-       'thealphadebuggers@gmail.com',  # From email
+       'thealphadummy@gmail.com',  # From email
        [f"{email}"],  # List of recipient email addresses
        fail_silently=False,  # Optional argument to suppress errors
        )
@@ -77,8 +77,8 @@ def contact(request):
         send_mail(
        'AlphaTrip',  # Subject
        f"Using the email address {email}, here is a message from {username}: {msg}. From AlphaTrip Website.",  # Message
-       'thealphadebuggers@gmail.com',  # From email
-       ['thealphadebuggers@gmail.com'],  # List of recipient email addresses
+       'thealphadummy@gmail.com',  # From email
+       ['thealphadummy@gmail.com'],  # List of recipient email addresses
        fail_silently=False,  # Optional argument to suppress errors
        )
 
