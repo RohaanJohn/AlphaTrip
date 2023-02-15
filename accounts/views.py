@@ -56,40 +56,7 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
-def contact(request):
-    
-      
-  if request.method== 'POST':
-        email = request.POST['email']
-        username = request.POST['username']
-        msg = request.POST['message']
-        
-        #Email_Password = os.environ.get('Email_Password')
 
-        send_mail(
-       'AlphaTrip',  # Subject
-       f"Hi {username}! Thank you for visiting AlphaTrip. Keep Exploring!",  # Message
-       'thealphadummy@gmail.com',  # From email
-       [f"{email}"],  # List of recipient email addresses
-       fail_silently=False,  # Optional argument to suppress errors
-       )
-
-        send_mail(
-       'AlphaTrip',  # Subject
-       f"Using the email address {email}, here is a message from {username}: {msg}. From AlphaTrip Website.",  # Message
-       'thealphadummy@gmail.com',  # From email
-       ['thealphadummy@gmail.com'],  # List of recipient email addresses
-       fail_silently=False,  # Optional argument to suppress errors
-       )
-
-        s.quit()
-        
-
-      
-        return redirect('/')
-  else:
-        return render(request,'contact.html')
-        return redirect('contact')
  
 
 
